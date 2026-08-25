@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://fluere-aura.onrender.com";
 
 let products = [];
 
@@ -184,25 +184,18 @@ async function loadProducts() {
             "Product loading error:",
             error
         );
-
-
+        
+        
         productGrid.innerHTML = `
+        <div class="product-loading">
+        
+            <strong>
+              Unable to load products.
+            </strong>
+            <br>
+            Please try again later.
+         </div>
 
-            <div class="product-loading">
-
-                <strong>
-                    Unable to load products.
-                </strong>
-
-                <br>
-
-                Make sure the backend is running on:
-
-                <br>
-
-                http://127.0.0.1:8000
-
-            </div>
 
         `;
 

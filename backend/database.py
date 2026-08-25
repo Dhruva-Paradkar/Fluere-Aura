@@ -17,7 +17,6 @@ DATABASE_NAME = os.getenv("DATABASE_NAME", "fluere_aura")
 if not MONGO_URI:
     raise RuntimeError("MONGO_URI is not configured")
 
-
 # Connect to MongoDB Atlas
 client = MongoClient(
     MONGO_URI,
